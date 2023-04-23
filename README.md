@@ -55,8 +55,8 @@ deprem.son_1saat(2)
         'boylam': '35.2963', 
         'derinlik': '7.7', 
         'buyukluk': '2.0', 
-        'yer': 'MADENLI-ALADAG', 
-        'tip': '(ADANA)'
+        'yer': 'MADENLI-ALADAG (ADANA)', 
+        'tip': 'Ilksel'
     }
 ]
 """
@@ -82,8 +82,8 @@ deprem.son_24saat(2)
         'boylam': '35.2963', 
         'derinlik': '7.7', 
         'buyukluk': '2.0', 
-        'yer': 'MADENLI-ALADAG', 
-        'tip': '(ADANA)'
+        'yer': 'MADENLI-ALADAG (ADANA)', 
+        'tip': 'Ilksel'
     }
 ]
 """
@@ -109,8 +109,8 @@ deprem.tum_depremler(2)
         'boylam': '35.2963', 
         'derinlik': '7.7', 
         'buyukluk': '2.0', 
-        'yer': 'MADENLI-ALADAG', 
-        'tip': '(ADANA)'
+        'yer': 'MADENLI-ALADAG (ADANA)', 
+        'tip': 'Ilksel'
     }
 ]
 """
