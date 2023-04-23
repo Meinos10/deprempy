@@ -19,6 +19,15 @@ class Deprem:
         self.strs = self.allstrs.split("---------- --------  --------  -------   ----------    ------------    --------------                                  --------------")[1].strip().split("\n")
 
     def son_deprem(self):
+        yer = ""
+        tip = ""
+        if self.strs[0].split()[9].replace("Ý", "I") == "Ilkesel":
+            yer = self.strs[0].split()[8]
+            tip = self.strs[0].split()[9].replace("Ý", "I")
+        else:
+            yer = self.strs[0].split()[8] + " " + self.strs[0].split()[9]
+            tip = self.strs[0].split()[10].replace("Ý", "I")
+        
         sd = {
             "tarih": self.strs[0].split()[0],
             "saat": self.strs[0].split()[1],
@@ -26,8 +35,8 @@ class Deprem:
             "boylam": self.strs[0].split()[3],
             "derinlik": self.strs[0].split()[4],
             "buyukluk": self.strs[0].split()[6],
-            "yer": self.strs[0].split()[8],
-            "tip": self.strs[0].split()[9].replace("Ý", "I")
+            "yer": yer,
+            "tip": tip
         }
         return sd
     
@@ -35,6 +44,14 @@ class Deprem:
         td = []
         for i in self.strs:
             if not self.strs.index(i)+1 > limit:
+                yer = ""
+                tip = ""
+                if self.strs[0].split()[9].replace("Ý", "I") == "Ilkesel":
+                    yer = self.strs[0].split()[8]
+                    tip = self.strs[0].split()[9].replace("Ý", "I")
+                else:
+                    yer = self.strs[0].split()[8] + " " + self.strs[0].split()[9]
+                    tip = self.strs[0].split()[10].replace("Ý", "I")
                 td.append({
                     "tarih": i.split()[0],
                     "saat": i.split()[1],
@@ -42,8 +59,8 @@ class Deprem:
                     "boylam": i.split()[3],
                     "derinlik": i.split()[4],
                     "buyukluk": i.split()[6],
-                    "yer": i.split()[8],
-                    "tip": i.split()[9].replace("Ý", "I")
+                    "yer": yer,
+                    "tip": tip
                 })
         return td
     
@@ -51,6 +68,15 @@ class Deprem:
         s24 = []
         for i in self.strs:
             if not self.strs.index(i)+1 > limit:
+                yer = ""
+                tip = ""
+                if self.strs[0].split()[9].replace("Ý", "I") == "Ilkesel":
+                    yer = self.strs[0].split()[8]
+                    tip = self.strs[0].split()[9].replace("Ý", "I")
+                else:
+                    yer = self.strs[0].split()[8] + " " + self.strs[0].split()[9]
+                    tip = self.strs[0].split()[10].replace("Ý", "I")
+
                 if i.split()[0] == self.son_deprem()["tarih"]:
                     s24.append({
                         "tarih": i.split()[0],
@@ -59,8 +85,8 @@ class Deprem:
                         "boylam": i.split()[3],
                         "derinlik": i.split()[4],
                         "buyukluk": i.split()[6],
-                        "yer": i.split()[8],
-                        "tip": i.split()[9].replace("Ý", "I")
+                        "yer": yer,
+                        "tip": tip
                     })
         return s24
     
@@ -68,6 +94,14 @@ class Deprem:
         s1 = []
         for i in self.strs:
             if not self.strs.index(i)+1 > limit:
+                yer = ""
+                tip = ""
+                if self.strs[0].split()[9].replace("Ý", "I") == "Ilkesel":
+                    yer = self.strs[0].split()[8]
+                    tip = self.strs[0].split()[9].replace("Ý", "I")
+                else:
+                    yer = self.strs[0].split()[8] + " " + self.strs[0].split()[9]
+                    tip = self.strs[0].split()[10].replace("Ý", "I")
                 if i.split()[0] == self.son_deprem()["tarih"] and i.split()[1].split(":")[0] == self.son_deprem()["saat"].split(":")[0]:
                     s1.append({
                         "tarih": i.split()[0],
@@ -76,8 +110,8 @@ class Deprem:
                         "boylam": i.split()[3],
                         "derinlik": i.split()[4],
                         "buyukluk": i.split()[6],
-                        "yer": i.split()[8],
-                        "tip": i.split()[9].replace("Ý", "I")
+                        "yer": yer,
+                        "tip": tip
                     })
         return s1
     
