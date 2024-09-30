@@ -19,99 +19,98 @@ deprem = Deprem()
 
 
 
-deprem.son_deprem()
+d = deprem.son_deprem()
 
 """
-{
-    'tarih': '2023.04.19', 
-    'saat': '14:45:23', 
-    'enlem': '37.8543', 
-    'boylam': '36.5763', 
-    'derinlik': '12.1', 
-    'buyukluk': '2.5', 
-    'yer': 'CEVREPINAR-(KAHRAMANMARAS)', 
-    'tip': 'Ilksel'
-}
+tarih: d.tarih
+saat: d.saat
+enlem: d.enlem
+boylam: d.boylam
+derinlik: d.derinlik
+buyukluk: d.buyukluk
+yer: d.yer
+tip: d.tip
+
 """
 
-deprem.son_1saat(2)
+deprem.son_1saat(limit=2, buyukluk_limit=1.0)
 
 """
 [
-    {
-        'tarih': '2023.04.19', 
-        'saat': '14:45:23', 
-        'enlem': '37.8543', 
-        'boylam': '36.5763', 
-        'derinlik': '12.1', 
-        'buyukluk': '2.5', 
-        'yer': 'CEVREPINAR-(KAHRAMANMARAS)', 
-        'tip': 'Ilksel'
-    }, 
-    {
-        'tarih': '2023.04.19', 
-        'saat': '14:28:29', 
-        'enlem': '37.4822', 
-        'boylam': '35.2963', 
-        'derinlik': '7.7', 
-        'buyukluk': '2.0', 
-        'yer': 'MADENLI-ALADAG (ADANA)', 
-        'tip': 'Ilksel'
-    }
+    DepremModel(
+        tarih: d.tarih
+        saat: d.saat
+        enlem: d.enlem
+        boylam: d.boylam
+        derinlik: d.derinlik
+        buyukluk: d.buyukluk
+        yer: d.yer
+        tip: d.tip
+    ),
+    DepremModel(
+        tarih: d.tarih
+        saat: d.saat
+        enlem: d.enlem
+        boylam: d.boylam
+        derinlik: d.derinlik
+        buyukluk: d.buyukluk
+        yer: d.yer
+        tip: d.tip
+    )
 ]
 """
 
-deprem.son_24saat(2)
+deprem.son_24saat(limit=2, buyukluk_limit=1.0)
 
 """
 [
-    {
-        'tarih': '2023.04.19', 
-        'saat': '14:45:23', 
-        'enlem': '37.8543', 
-        'boylam': '36.5763', 
-        'derinlik': '12.1', 
-        'buyukluk': '2.5', 
-        'yer': 'CEVREPINAR-(KAHRAMANMARAS)',
-        'tip': 'Ilksel'
-    }, 
-    {
-        'tarih': '2023.04.19', 
-        'saat': '14:28:29', 
-        'enlem': '37.4822', 
-        'boylam': '35.2963', 
-        'derinlik': '7.7', 
-        'buyukluk': '2.0', 
-        'yer': 'MADENLI-ALADAG (ADANA)', 
-        'tip': 'Ilksel'
-    }
+    DepremModel(
+        tarih: d.tarih
+        saat: d.saat
+        enlem: d.enlem
+        boylam: d.boylam
+        derinlik: d.derinlik
+        buyukluk: d.buyukluk
+        yer: d.yer
+        tip: d.tip
+    ),
+    DepremModel(
+        tarih: d.tarih
+        saat: d.saat
+        enlem: d.enlem
+        boylam: d.boylam
+        derinlik: d.derinlik
+        buyukluk: d.buyukluk
+        yer: d.yer
+        tip: d.tip
+    )
 ]
 """
 
-deprem.tum_depremler(2)
+deprem.tum_depremler(limit=2, buyukluk_limit=1.0)
 
 """
 [
-    {
-        'tarih': '2023.04.19', 
-        'saat': '14:45:23', 
-        'enlem': '37.8543', 
-        'boylam': '36.5763', 
-        'derinlik': '12.1', 
-        'buyukluk': '2.5', 
-        'yer': 'CEVREPINAR-(KAHRAMANMARAS)',
-        'tip': 'Ilksel'
-    }, 
-    {
-        'tarih': '2023.04.19', 
-        'saat': '14:28:29', 
-        'enlem': '37.4822', 
-        'boylam': '35.2963', 
-        'derinlik': '7.7', 
-        'buyukluk': '2.0', 
-        'yer': 'MADENLI-ALADAG (ADANA)', 
-        'tip': 'Ilksel'
-    }
+    DepremModel(
+        tarih: d.tarih
+        saat: d.saat
+        enlem: d.enlem
+        boylam: d.boylam
+        derinlik: d.derinlik
+        buyukluk: d.buyukluk
+        yer: d.yer
+        tip: d.tip
+    ),
+    DepremModel(
+        tarih: d.tarih
+        saat: d.saat
+        enlem: d.enlem
+        boylam: d.boylam
+        derinlik: d.derinlik
+        buyukluk: d.buyukluk
+        yer: d.yer
+        tip: d.tip
+    )
 ]
 """
 ```
