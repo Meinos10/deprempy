@@ -33,7 +33,7 @@ tip: d.tip
 
 """
 
-deprem.son_1saat(limit=2, buyukluk_limit=1.0)
+d = deprem.son_1saat(limit=2, buyukluk_limit=1.0)
 
 """
 [
@@ -60,7 +60,7 @@ deprem.son_1saat(limit=2, buyukluk_limit=1.0)
 ]
 """
 
-deprem.son_24saat(limit=2, buyukluk_limit=1.0)
+d = deprem.son_24saat(limit=2, buyukluk_limit=1.0)
 
 """
 [
@@ -87,7 +87,7 @@ deprem.son_24saat(limit=2, buyukluk_limit=1.0)
 ]
 """
 
-deprem.tum_depremler(limit=2, buyukluk_limit=1.0)
+d = deprem.tum_depremler(limit=2, buyukluk_limit=1.0)
 
 """
 [
